@@ -8,6 +8,8 @@ import { CurrentWeather } from "@/components/currentWeather";
 import { HourlyTemperature } from "@/components/HourlyTemprature";
 import { WeatherDetails } from "@/components/WeatherDetails";
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from "@/hooks/useWeather";
+import { WeatherForecast } from "@/components/WeatherForcast";
+import { FavoriteCities } from "@/components/FavCities";
 
 
 export function WeatherDashboard() {
@@ -91,8 +93,8 @@ export function WeatherDashboard() {
   }
 
   return (
-    <div className="space-y-4">
-      {/* <FavoriteCities /> */}
+    <div className="space-y-4 w-full">
+      <FavoriteCities />
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold tracking-tight">My Location</h1>
         <Button
@@ -120,7 +122,7 @@ export function WeatherDashboard() {
 
         <div className="grid gap-6 md:grid-cols-2 items-start">
           <WeatherDetails data={weatherQuery.data} />
-          {/* <WeatherForecast data={forecastQuery.data} /> */}
+          <WeatherForecast data={forecastQuery.data} />
         </div>
       </div>
     </div>

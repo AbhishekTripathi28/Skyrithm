@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { ThemeProvider } from "./components/theme-provider";
-import CityPAge from "./pages/CityPAge";
 import {
   QueryClient,
   QueryClientProvider,
@@ -9,6 +8,8 @@ import {
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Layout from "./components/Layout";
 import { WeatherDashboard } from "./pages/WeatherDashboard";
+import { Toaster } from "sonner";
+import CityPage from "./pages/CityPAge";
 
 function App() {
   const queryClient = new QueryClient();
@@ -20,9 +21,10 @@ function App() {
             <Layout>
               <Routes>
                 <Route path="/" element={<WeatherDashboard />} />
-                <Route path="/city/:cityName" element={<CityPAge />} />
+                <Route path="/city/:cityName" element={<CityPage />} />
               </Routes>
             </Layout>
+            <Toaster richColors/>
           </BrowserRouter>
         </ThemeProvider>
         <ReactQueryDevtools initialIsOpen={false} />
