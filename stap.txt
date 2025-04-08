@@ -1,0 +1,9 @@
+this is two page web app 
+
+tach stack -> 
+react - libarey 
+shadcn - for components
+tailwind - for css 
+react query(tanstack query) - for fetching the apis 
+openWeather - for api 
+typescript - for coding
