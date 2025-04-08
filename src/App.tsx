@@ -2,13 +2,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { ThemeProvider } from "./components/theme-provider";
 import CityPAge from "./pages/CityPAge";
-import WeatherDashboard from "./pages/WeatherDashboard";
 import {
   QueryClient,
   QueryClientProvider,
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Layout from "./components/Layout";
+import { WeatherDashboard } from "./pages/WeatherDashboard";
 
 function App() {
   const queryClient = new QueryClient();
