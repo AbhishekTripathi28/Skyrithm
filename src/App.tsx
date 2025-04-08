@@ -9,7 +9,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Layout from "./components/Layout";
 import { WeatherDashboard } from "./pages/WeatherDashboard";
 import { Toaster } from "sonner";
-import CityPage from "./pages/CityPAge";
+import CityPage from "./pages/CityPage";
 
 function App() {
   const queryClient = new QueryClient();
