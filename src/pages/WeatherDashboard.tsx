@@ -10,6 +10,7 @@ import { WeatherDetails } from "@/components/WeatherDetails";
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from "@/hooks/useWeather";
 import { WeatherForecast } from "@/components/WeatherForcast";
 import { FavoriteCities } from "@/components/FavCities";
+import DiscriptionCard from "@/components/DiscriptionCard";
 
 
 export function WeatherDashboard() {
@@ -19,10 +20,14 @@ export function WeatherDashboard() {
     isLoading: locationLoading,
     getLocation,
   } = useGeolocation();
-
+  
   const weatherQuery = useWeatherQuery(coordinates);
   const forecastQuery = useForecastQuery(coordinates);
   const locationQuery = useReverseGeocodeQuery(coordinates);
+  
+  const locationName = locationQuery.data?.[0];
+
+
 
   // Function to refresh all data
   const handleRefresh = () => {
@@ -70,7 +75,6 @@ export function WeatherDashboard() {
     );
   }
 
-  const locationName = locationQuery.data?.[0];
 
   if (weatherQuery.error || forecastQuery.error) {
     return (
@@ -117,6 +121,10 @@ export function WeatherDashboard() {
             data={weatherQuery.data}
             locationName={locationName}
           />
+          <DiscriptionCard data={weatherQuery.data} />
+        </div>
+        <div>
+
           <HourlyTemperature data={forecastQuery.data} />
         </div>
 

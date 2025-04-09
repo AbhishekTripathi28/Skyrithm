@@ -14,6 +14,8 @@ export function CurrentWeather({ data, locationName }: CurrentWeatherProps) {
     wind: { speed },
   } = data;
 
+  console.log("CurrentWeather", );
+
   // Format temperature
   const formatTemp = (temp: number) => `${Math.round(temp)}°`;
 
@@ -80,7 +82,7 @@ export function CurrentWeather({ data, locationName }: CurrentWeatherProps) {
           <div className="flex flex-col items-center justify-center">
             <div className="relative flex aspect-square w-full max-w-[200px] items-center justify-center">
               <img
-                src={`https://openweathermap.org/img/wn/${currentWeather.icon}@4x.png`}
+                src={`https://openweathermap.org/img/wn/${currentWeather.icon}@2x.png`}
                 alt={currentWeather.description}
                 className="h-full w-full object-contain"
               />
