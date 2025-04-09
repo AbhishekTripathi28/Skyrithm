@@ -12,7 +12,7 @@ import { WeatherForecast } from "@/components/WeatherForcast";
 import { FavoriteCities } from "@/components/FavCities";
 
 
-export default function WeatherDashboard() {
+ function WeatherDashboard() {
   const {
     coordinates,
     error: locationError,
@@ -128,3 +128,5 @@ export default function WeatherDashboard() {
     </div>
   );
 }
+
+export default WeatherDashboard;
