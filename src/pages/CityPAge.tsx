@@ -11,7 +11,7 @@ import { WeatherForecast } from "@/components/WeatherForcast";
 import { FavoriteButton } from "@/components/FavButton";
 
 
-export function CityPage() {
+export default function CityPage() {
   const [searchParams] = useSearchParams();
   const params = useParams();
   const lat = parseFloat(searchParams.get("lat") || "0");
@@ -62,4 +62,3 @@ export function CityPage() {
   );
 }
 
-export default CityPage;

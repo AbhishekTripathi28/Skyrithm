@@ -7,8 +7,8 @@ import {
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Layout from "./components/Layout";
-import { WeatherDashboard } from "./pages/WeatherDashboard";
 import { Toaster } from "sonner";
+import WeatherDashboard from "./pages/WeatherDashboard";
 import CityPage from "./pages/CityPage";
 
 const queryClient = new QueryClient({
