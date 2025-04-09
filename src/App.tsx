@@ -30,8 +30,7 @@ function App() {
           <BrowserRouter>
             <Layout>
               <Routes>
-                <Route path="/" element={<WeatherDashboard />} />
-                
+                <Route path="/" element={<WeatherDashboard />} />     
                 <Route path="/city/:cityName" element={<CityPage />} />
               </Routes>
             </Layout>
