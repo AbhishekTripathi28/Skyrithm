@@ -11,8 +11,18 @@ import { WeatherDashboard } from "./pages/WeatherDashboard";
 import { Toaster } from "sonner";
 import CityPage from "./pages/CityPage";
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // 5 minutes
+      gcTime: 10 * 60 * 1000, // 10 minutes
+      retry: false,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
 function App() {
-  const queryClient = new QueryClient();
   return (
     <>
       <QueryClientProvider client={queryClient}>
