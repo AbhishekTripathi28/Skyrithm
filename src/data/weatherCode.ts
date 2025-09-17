@@ -6,6 +6,7 @@ export interface WeatherCondition {
   };
 }
 
+// suggestion data
 export const weatherConditions: WeatherCondition = {
   200: {
     description: "Thunderstorm with light rain",
