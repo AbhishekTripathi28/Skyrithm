@@ -30,6 +30,8 @@ function CityWeatherPage() {
         </Alert>
       );
     }
+
+    console.log()
   
     if (!weatherQuery.data || !forecastQuery.data || !params.cityName) {
       return <WeatherSkeleton />;
