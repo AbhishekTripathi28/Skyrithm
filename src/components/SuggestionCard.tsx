@@ -16,11 +16,11 @@ function DiscriptionCard({ data }: { data: WeatherData }) {
     "
     >
       <CardContent className="">
-        <div className="relative flex  justify-center items-start px-4 py-2 flex-col gap-4">
+        <div className="relative flex  justify-center items-start px-2  flex-col gap-4">
           <div className="space-y-2">
             {/* suggestion div */}
             <CardTitle>Activity</CardTitle>
-            <div className="grid md:grid-cols-2 justify-between  gap-2 px-2 py-4 ">
+            <div className="grid md:grid-cols-2 justify-between  gap-2 px-2 py-2 ">
               {suggestion.map((item, index) => (
                 <p
                   key={index}
