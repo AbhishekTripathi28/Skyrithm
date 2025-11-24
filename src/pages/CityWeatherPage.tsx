@@ -3,7 +3,7 @@ import { FavoriteButton } from "@/components/FavButton";
 import { HourlyTemperature } from "@/components/HourlyTemprature";
 import WeatherSkeleton from "@/components/LoadingSkeleton";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { WeatherDetails } from "@/components/WeatherDetails";
+// import { WeatherDetails } from "@/components/WeatherDetails";
 import { WeatherForecast } from "@/components/WeatherForcast";
 import { useForecastQuery, useWeatherQuery } from "@/hooks/useWeather";
 import { AlertTriangle } from "lucide-react";
@@ -53,7 +53,7 @@ function CityWeatherPage() {
         <CurrentWeather data={weatherQuery.data} />
         <HourlyTemperature data={forecastQuery.data} />
         <div className="grid gap-6 md:grid-cols-2 items-start">
-          <WeatherDetails data={weatherQuery.data} />
+          {/* <WeatherDetails data={weatherQuery.data} /> */}
           <WeatherForecast data={forecastQuery.data} />
         </div>
       </div>

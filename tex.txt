@@ -1,0 +1,21 @@
+in module structure the cade will run only 1 time regardless how meny time the perticular module will import or call
+
+the way to call the function --
+regular fn call - fn()
+constructor - new fn() 
+call () - call the fn with the given this(context)
+apply() call the fn with given array of this 
+bind () return the fn after calling the fn with given this 
+arrow fn 
+IIFE - (()=> {})(),
+       2nd way - +function name (){
+
+                                   }()
+callback
+fn constructor - eg: const fn = new function ("a", "b", "return a+b");
+fn (10,10) 
+eval- its deprecated coz it run the str eg: const str="console.log(1)"; eval (str) -- it run and print 1
+
+
+
+ 

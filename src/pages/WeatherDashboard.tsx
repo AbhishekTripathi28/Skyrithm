@@ -1,4 +1,3 @@
-
 import { useGeolocation } from "@/hooks/useGeolocation";
 import { Alert, AlertDescription, AlertTitle } from "../components/ui/alert";
 import { Button } from "../components/ui/button";
@@ -7,11 +6,14 @@ import WeatherSkeleton from "@/components/LoadingSkeleton";
 import { CurrentWeather } from "@/components/currentWeather";
 import { HourlyTemperature } from "@/components/HourlyTemprature";
 import { WeatherDetails } from "@/components/WeatherDetails";
-import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from "@/hooks/useWeather";
+import {
+  useForecastQuery,
+  useReverseGeocodeQuery,
+  useWeatherQuery,
+} from "@/hooks/useWeather";
 import { WeatherForecast } from "@/components/WeatherForcast";
 import { FavoriteCities } from "@/components/FavCities";
-import DiscriptionCard from "@/components/DiscriptionCard";
-
+import DiscriptionCard from "@/components/SuggestionCard";
 
 export function WeatherDashboard() {
   const {
@@ -20,14 +22,12 @@ export function WeatherDashboard() {
     isLoading: locationLoading,
     getLocation,
   } = useGeolocation();
-  
+
   const weatherQuery = useWeatherQuery(coordinates);
   const forecastQuery = useForecastQuery(coordinates);
   const locationQuery = useReverseGeocodeQuery(coordinates);
-  
+
   const locationName = locationQuery.data?.[0];
-
-
 
   // Function to refresh all data
   const handleRefresh = () => {
@@ -75,7 +75,6 @@ export function WeatherDashboard() {
     );
   }
 
-
   if (weatherQuery.error || forecastQuery.error) {
     return (
       <Alert variant="destructive">
@@ -116,7 +115,7 @@ export function WeatherDashboard() {
       </div>
 
       <div className="grid gap-6">
-        <div className="flex flex-col lg:flex-row gap-4">
+        <div className="grid gap-6 md:grid-cols-2 items-start">
           <CurrentWeather
             data={weatherQuery.data}
             locationName={locationName}
@@ -124,7 +123,6 @@ export function WeatherDashboard() {
           <DiscriptionCard data={weatherQuery.data} />
         </div>
         <div>
-
           <HourlyTemperature data={forecastQuery.data} />
         </div>
 
