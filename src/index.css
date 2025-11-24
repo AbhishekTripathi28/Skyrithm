@@ -118,3 +118,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+}
+.scroll-snap-start {
+  scroll-snap-align: start;
+}
+
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
