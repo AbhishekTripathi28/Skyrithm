@@ -53,7 +53,7 @@ function DiscriptionCard({ data }: { data: WeatherData }) {
                           "/fpo-lifestyle-2-1800x900@2x.png";
                       }}
                     />
-                    <p className="text-sm mt-1 text-center">
+                    <p className="text-sm mt-1 text-center text-muted-foreground">
                       {item.productName}
                     </p>
                   </div>
